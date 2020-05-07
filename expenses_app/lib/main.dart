@@ -30,11 +30,17 @@ class MyApp extends StatelessWidget {
         errorColor: Colors.red,
         fontFamily: 'Quicksand',
         textTheme: ThemeData.light().textTheme.copyWith(
-              title: TextStyle(
+              headline1: TextStyle(
                 fontFamily: 'Open Sans',
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
+              // title: TextStyle(
+              //   fontFamily: 'Open Sans',
+              //   fontSize: 18,
+              //   fontWeight: FontWeight.bold,
+              // ),
               button: TextStyle(color: Colors.white),
             ),
         appBarTheme: AppBarTheme(
@@ -124,14 +130,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
+            backgroundColor: Theme.of(context).primaryColor,
             middle: Text(
               'Personal Expenses',
+              style: TextStyle(
+                color: Theme.of(context).textTheme.headline1.color,
+              ),
             ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 GestureDetector(
-                  child: Icon(CupertinoIcons.add),
+                  child: Icon(CupertinoIcons.add, color: Theme.of(context).textTheme.headline1.color,),
                   onTap: () => _startNewAddTransaction(context),
                 )
               ],
