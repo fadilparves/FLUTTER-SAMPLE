@@ -31,6 +31,22 @@ class MealItem extends StatelessWidget {
     }
   }
 
+  String get affordableText {
+    switch (affordability) {
+      case Affordability.Affordable:
+        return 'Affordable';
+        break;
+      case Affordability.Pricey:
+        return 'Pricey';
+        break;
+      case Affordability.Luxurious:
+        return 'Luxurious';
+        break;
+      default:
+        return 'Default';
+    }
+  }
+
   void selectMeal() {}
 
   @override
@@ -85,6 +101,7 @@ class MealItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Row(
                     children: <Widget>[
@@ -105,7 +122,18 @@ class MealItem extends StatelessWidget {
                       SizedBox(
                         width: 6,
                       ),
-                      Text('${complexity}'),
+                      Text(complexityText),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.attach_money,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text(affordableText),
                     ],
                   ),
                 ],
