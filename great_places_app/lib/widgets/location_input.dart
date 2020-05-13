@@ -16,8 +16,8 @@ class LocationInput extends StatefulWidget {
 class _LocationInputState extends State<LocationInput> {
   String _previewImageUrl;
 
-  void _showPreview(double lat, double lng) {
-    final staticMapUrl = LocationHelper.generateLocationPreviewImage(
+  void _showPreview(double lat, double lng) async {
+    final staticMapUrl = await LocationHelper.generateLocationPreviewImage(
       latitude: lat,
       longitude: lng,
     );
