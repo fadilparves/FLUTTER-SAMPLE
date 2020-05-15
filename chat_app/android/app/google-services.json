@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "947004418932",
+    "firebase_url": "https://nice-storm-224402.firebaseio.com",
+    "project_id": "nice-storm-224402",
+    "storage_bucket": "nice-storm-224402.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947004418932:android:2b5946e097401a73f21a21",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947004418932-tnd0v893fvcu0q1t878ffnnbpb3btsqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSjOo4jfXXiaNnRvG1ifdkOny6DLC9DjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947004418932-tnd0v893fvcu0q1t878ffnnbpb3btsqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
